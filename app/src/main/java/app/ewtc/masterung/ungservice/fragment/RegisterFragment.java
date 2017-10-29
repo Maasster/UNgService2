@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import app.ewtc.masterung.ungservice.MainActivity;
@@ -38,10 +39,26 @@ public class RegisterFragment extends Fragment{
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+//get value from edittext
+                EditText nameEditText= getView().findViewById(R.id.edtName);
+                EditText userEditTex = getView().findViewById(R.id.edtUser);
+                EditText passwEditText = getView().findViewById(R.id.edtPassword);
+
+                //chang type value to string
+                nameString= nameEditText.getText().toString().trim();
+                userString=userEditTex.getText().toString().trim();
+                passwordString=userEditTex.getText().toString().trim();
+
+                //check space
+                if (nameString.equals("") ||userString.equals("")||passwordString.equals("")) {
+                    //have space
+                } else {
+            //no space
 
 
+                }
 
-            }
+            }//onclick
         });
     }
 
